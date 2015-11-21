@@ -2,8 +2,7 @@
 Transcriptome Genes Modeler
 
 
-Requirements
-------------
+## Requirements
 
 1.CAP3 Assembly Program [link](http://seq.cs.iastate.edu/cap3.html)
 
@@ -28,8 +27,7 @@ Requirements
     
 
 
-Reference
----------
+## Reference
 
 Michal T. Stuglik, Wiesław Babik, Zofia Prokop and Jacek Radwan.
 
