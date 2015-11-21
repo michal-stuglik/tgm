@@ -58,6 +58,11 @@ cap3 cap3_seq_in -o $CAP_PARAM_O -p $CAP_PARAM_P > cap3.log
 # joining results from cap3
 cat cap3_seq_in.cap.contigs cap3_seq_in.cap.singlets > $CAP_OUT
 
+TIME_ASSEM_END=`date +%s`
+TIME_ASSEM_TOTAL=$(expr $TIME_ASSEM_END - $TIME_START)
+TIME_ASSEM_TOTAL_MINUTES=$(expr $TIME_ASSEM_TOTAL / 60)
+echo 'Assembly time [m]: '$TIME_ASSEM_TOTAL_MINUTES
+
 
 echo -e '\n\n---------------------- 2. cd-hit-est pipline  ------------------------'
 cdhit-est -i $CAP_OUT -o $CDHIT_OUT  -c $CDHIT_IDENTITY -n $CDHIT_WORDSIZE -M $CDHIT_MAXMEM
