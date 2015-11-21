@@ -4,13 +4,11 @@
 ###########################   Transcriptome gene modeller #######################
 #################################################################################
 
-# general settings
-WORKING_DIR=$(pwd)
-THREADS_NUM=2
-TIME_START=`date +%s`
-
 # INPUT file
 CAP_IN='sample-data/reads10k.fasta'
+
+# Number of threads/processors
+THREADS_NUM=2
 
 
 # CAP3 settings
@@ -42,13 +40,14 @@ ALIGNMENT_OUT=alignment_out
 ASSESMENT_OUT=assesment_out
 ALIGNMENT_CONSENSUS_OUT=alignment_consensus_out
 
-mkdir -p $TGM_OUTDIR
-cd $TGM_OUTDIR
-
 #################################################################################
 #####################################   pipeline    #############################
 #################################################################################
 
+TIME_START=`date +%s`
+WORKING_DIR=$(pwd)
+mkdir -p $TGM_OUTDIR
+cd $TGM_OUTDIR
 
 echo -e '\n\n------------------------- 1. cap3 Assembly  --------------------------'
 # symlink to input sequences
