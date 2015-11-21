@@ -10,7 +10,7 @@ THREADS_NUM=2
 TIME_START=`date +%s`
 
 # INPUT file
-CAP_IN='sample-data/Trinity.fasta'
+CAP_IN='sample-data/reads10k.fasta'
 
 
 # CAP3 settings
